@@ -42,6 +42,19 @@ class UpcomingTableViewCell: UITableViewCell,  UICollectionViewDelegate, UIColle
             
             collectionView.reloadData()
         }
+    func convertDataFormatter(_ date: String?) -> String {
+        var fixDate = ""
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let originalDate = date {
+            if let newDate = dateFormatter.date(from: originalDate){
+                dateFormatter.dateFormat = "d MMM yyyy"
+                fixDate = dateFormatter.string(from: newDate)
+            }
+        }
+        return fixDate
+
+    }
         
         // MARK: - collectionView
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,7 +73,9 @@ class UpcomingTableViewCell: UITableViewCell,  UICollectionViewDelegate, UIColle
             imageview.layer.cornerRadius = 8
             let filmName = cell.viewWithTag(1001) as! UILabel
             filmName.text = mainMovie.banner[indexPath.row].title
-                       return cell
+            let date = cell.viewWithTag(1002) as! UILabel
+            date.text = convertDataFormatter(mainMovie.banner[indexPath.row].release_date)
+            return cell
         }
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

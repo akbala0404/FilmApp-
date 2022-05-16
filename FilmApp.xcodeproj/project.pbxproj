@@ -29,6 +29,7 @@
 		FE7FF961280FD92500903A60 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5DBD9527FD626F00328447 /* SFProDisplay-Bold.ttf */; };
 		FE7FF962280FD92800903A60 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5DBD9427FD626F00328447 /* SFProDisplay-Regular.ttf */; };
 		FEC27A2C28074B21005A75F1 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC27A2B28074B21005A75F1 /* SearchTableViewController.swift */; };
+		FED80CF0283149B5004F7395 /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED80CEF283149B5004F7395 /* TopRated.swift */; };
 		FEE60AB0281BB23400866A25 /* MainMovies .swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE60AAF281BB23400866A25 /* MainMovies .swift */; };
 		FEE879E027F623B5000E2A30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE879DF27F623B5000E2A30 /* AppDelegate.swift */; };
 		FEE879E227F623B5000E2A30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE879E127F623B5000E2A30 /* SceneDelegate.swift */; };
@@ -63,6 +64,7 @@
 		FE7FF95D280FD90800903A60 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FE7FF95F280FD91500903A60 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FEC27A2B28074B21005A75F1 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		FED80CEF283149B5004F7395 /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
 		FEE60AAF281BB23400866A25 /* MainMovies .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainMovies .swift"; sourceTree = "<group>"; };
 		FEE879DC27F623B5000E2A30 /* FilmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE879DF27F623B5000E2A30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				FE28C1922806915A00A8B90C /* Movie.swift */,
 				FEE60AAF281BB23400866A25 /* MainMovies .swift */,
+				FED80CEF283149B5004F7395 /* TopRated.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				FEC27A2C28074B21005A75F1 /* SearchTableViewController.swift in Sources */,
 				FE7FF95E280FD90800903A60 /* SignInViewController.swift in Sources */,
 				FEE879E227F623B5000E2A30 /* SceneDelegate.swift in Sources */,
+				FED80CF0283149B5004F7395 /* TopRated.swift in Sources */,
 				FE7FF960280FD91500903A60 /* SignUpViewController.swift in Sources */,
 				FEE60AB0281BB23400866A25 /* MainMovies .swift in Sources */,
 				FE28C1932806915A00A8B90C /* Movie.swift in Sources */,

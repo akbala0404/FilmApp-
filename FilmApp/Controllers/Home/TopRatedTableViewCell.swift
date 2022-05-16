@@ -69,6 +69,20 @@ class TopRatedTableViewCell: UITableViewCell,  UICollectionViewDelegate, UIColle
             
             collectionView.reloadData()
         }
+    
+    func convertDataFormatter(_ date: String?) -> String {
+        var fixDate = ""
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let originalDate = date {
+            if let newDate = dateFormatter.date(from: originalDate){
+                dateFormatter.dateFormat = "d MMM, yyyy"
+                fixDate = dateFormatter.string(from: newDate)
+            }
+        }
+        return fixDate
+
+    }
         
         // MARK: - collectionView
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,7 +102,7 @@ class TopRatedTableViewCell: UITableViewCell,  UICollectionViewDelegate, UIColle
             let filmName = cell.viewWithTag(1001) as! UILabel
             filmName.text = mainMovie.movies[indexPath.row].title
             let releaseDate = cell.viewWithTag(1002) as! UILabel
-            releaseDate.text = mainMovie.movies[indexPath.row].release_date
+            releaseDate.text = convertDataFormatter(mainMovie.movies[indexPath.row].release_date)
             let rating = cell.viewWithTag(1003) as! UILabel
             rating.text = "\(mainMovie.movies[indexPath.row].vote_average)"
                        return cell

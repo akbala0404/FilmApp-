@@ -24,19 +24,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.delegate = self
             tableView.dataSource = self
 
-           // addNavBarImage()
+            addNavBarImage()
             
             downloadMainBanners()
         }
         
-//        func addNavBarImage() {
-//            let image = UIImage(named: "logoMainPage")!
-//
-//            let logoImageView = UIImageView(image: image)
-//            let imageItem = UIBarButtonItem.init(customView: logoImageView)
-//            navigationItem.leftBarButtonItem = imageItem
-//        }
-//
+        func addNavBarImage() {
+            let image = UIImage(named: "SANDWITCH")!
+
+            let logoImageView = UIImageView(image: image)
+            let imageItem = UIBarButtonItem.init(customView: logoImageView)
+            navigationItem.leftBarButtonItem = imageItem
+        }
+
         // MARK: - downloads
         // step 1
         func downloadTopRated() {
