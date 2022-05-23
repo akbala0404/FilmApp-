@@ -16,6 +16,7 @@ class SearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var yearLabel: UILabel!
     
+    @IBOutlet weak var ratingLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         posterImageView.layer.cornerRadius = 8

@@ -28,6 +28,21 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
         searchMovie(title: "Spiderman")
         
     }
+    
+    func convertDataFormatter(_ date: String?) -> String {
+              var fixDate = ""
+              let dateFormatter = DateFormatter()
+              dateFormatter.dateFormat = "yyyy-MM-dd"
+              if let originalDate = date {
+                  if let newDate = dateFormatter.date(from: originalDate){
+                      dateFormatter.dateFormat = "d MMM, yyyy"
+                      fixDate = dateFormatter.string(from: newDate)
+                  }
+              }
+              return fixDate
+
+          }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         movieList.removeAll()
         tableView.reloadData()
@@ -70,8 +85,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchTableViewCell
         cell.titleLabel.text = movieList[indexPath.row].title
-        cell.yearLabel.text = movieList[indexPath.row].release_date
+        cell.yearLabel.text = convertDataFormatter( movieList[indexPath.row].release_date)
         cell.posterImageView.sd_setImage(with: URL(string: movieList[indexPath.row].posterImage), completed: nil)
+        cell.ratingLabel.text = "\(movieList[indexPath.row].vote_average)"
         return cell
     }
     
@@ -80,8 +96,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewcontroller = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        navigationController?.show(viewcontroller, sender: self)
         viewcontroller.movie = movieList[indexPath.row]
+
+        navigationController?.show(viewcontroller, sender: self)
     }
     
     /*

@@ -15,6 +15,7 @@ class Movie {
     var vote_average: Double = 0.0
     var original_title = ""
     var overview = ""
+    var backdrop_path = ""
     var posterImage = ""
     init (){
     }
@@ -40,6 +41,11 @@ class Movie {
             let fullPath = "https://image.tmdb.org/t/p/w500/" + temp
             posterImage = fullPath
         }
+        
+        if let temp = json["backdrop_path"].string{
+              let fullPath = "https://image.tmdb.org/t/p/original/" + temp
+              backdrop_path = fullPath
+              }
         
     }
 }

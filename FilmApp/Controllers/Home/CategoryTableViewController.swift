@@ -26,6 +26,21 @@ class CategoryTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+      // MARK: - convert Date
+
+    func convertDataFormatter(_ date: String?) -> String {
+              var fixDate = ""
+              let dateFormatter = DateFormatter()
+              dateFormatter.dateFormat = "yyyy-MM-dd"
+              if let originalDate = date {
+                  if let newDate = dateFormatter.date(from: originalDate){
+                      dateFormatter.dateFormat = "d MMM, yyyy"
+                      fixDate = dateFormatter.string(from: newDate)
+                  }
+              }
+              return fixDate
+
+          }
     
     // MARK: - Table view data source
     
@@ -43,8 +58,10 @@ class CategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SearchTableViewCell
         cell?.titleLabel.text = movies[indexPath.row].title
-        cell?.yearLabel.text = movies[indexPath.row].release_date
+        cell?.yearLabel.text = convertDataFormatter( movies[indexPath.row].release_date)
         cell?.posterImageView.sd_setImage(with: URL(string: movies[indexPath.row].posterImage), completed: nil)
+        cell?.ratingLabel.text = "\(movies[indexPath.row].vote_average)"
+    
         
         // Configure the cell...
         
@@ -54,6 +71,11 @@ class CategoryTableViewController: UITableViewController {
         return 140.0
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailViewController.movie = movies[indexPath.row]
+        navigationController?.show(detailViewController, sender: self)
+    }
     
     /*
      // Override to support conditional editing of the table view.
