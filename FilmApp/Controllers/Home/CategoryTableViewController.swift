@@ -1,57 +1,30 @@
 //
-//  SearchTableViewController.swift
+//  CategoryTableViewController.swift
 //  FilmApp
 //
-//  Created by Акбала Тлеугалиева on 4/13/22.
+//  Created by Акбала Тлеугалиева on 5/23/22.
 //  Copyright © 2022 Akbala Tleugaliyeva. All rights reserved.
 //
 
 import UIKit
 import SDWebImage
-import SVProgressHUD
-import Alamofire
-import SwiftyJSON
-class SearchTableViewController: UITableViewController, UISearchBarDelegate{
-    let searchController = UISearchController(searchResultsController: nil)
-    var movieList = [Movie]()
-    
+
+
+class CategoryTableViewController: UITableViewController {
+    var movies:[Movie] = []
+    var categoryName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = categoryName
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search movie"
-        navigationItem.searchController = searchController
-        searchMovie(title: "Spiderman")
-        
-    }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        movieList.removeAll()
-        tableView.reloadData()
-        searchMovie(title: searchBar.text!)
-    }
-    
-    
-    func searchMovie(title: String) {
-        AF.request("https://api.themoviedb.org/3/search/movie?api_key=da0213edba5ce29d325c43cfec6aeab5&query=\(title)",
-            method: .get, parameters: nil).responseJSON {
-                response in
-                if response.response?.statusCode == 200{
-                    let json = JSON(response.value!)
-                    if let array = json["results"].array {
-                        for item in array {
-                            let movie = Movie(json: item)
-                            self.movieList.append(movie)
-                        }
-                        
-                    }
-                    self.tableView.reloadData()
-                    
-                }
-        }
     }
     
     // MARK: - Table view data source
@@ -63,26 +36,24 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return movieList.count
+        return movies.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchTableViewCell
-        cell.titleLabel.text = movieList[indexPath.row].title
-        cell.yearLabel.text = movieList[indexPath.row].release_date
-        cell.posterImageView.sd_setImage(with: URL(string: movieList[indexPath.row].posterImage), completed: nil)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SearchTableViewCell
+        cell?.titleLabel.text = movies[indexPath.row].title
+        cell?.yearLabel.text = movies[indexPath.row].release_date
+        cell?.posterImageView.sd_setImage(with: URL(string: movies[indexPath.row].posterImage), completed: nil)
+        
+        // Configure the cell...
+        
+        return cell!
     }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewcontroller = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        navigationController?.show(viewcontroller, sender: self)
-        viewcontroller.movie = movieList[indexPath.row]
-    }
+    
     
     /*
      // Override to support conditional editing of the table view.
@@ -100,7 +71,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
      tableView.deleteRows(at: [indexPath], with: .fade)
      } else if editingStyle == .insert {
      // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
+     }    
      }
      */
     
@@ -130,4 +101,3 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
      */
     
 }
-

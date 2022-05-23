@@ -19,11 +19,11 @@ enum CellType {
 class MainMovies {
     var page = ""
     var movies: [Movie] = []
-    var banner: [TopRated] = []
+    var banner: [Movie] = []
     var cellType: CellType = .mainMovie
     var total_pages = ""
     var total_results = ""
-
+    
     
     init() {
         
@@ -34,8 +34,8 @@ class MainMovies {
             self.page = temp
         }
         if let temp = json["total_results"].string {
-                  self.total_results = temp
-              }
+            self.total_results = temp
+        }
         if let temp = json["total_pages"].string {
             self.total_pages = temp
         }

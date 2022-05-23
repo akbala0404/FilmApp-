@@ -16,6 +16,7 @@
 		FE28C1932806915A00A8B90C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE28C1922806915A00A8B90C /* Movie.swift */; };
 		FE3A7F4927F7009F002071E3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3A7F4827F7009F002071E3 /* TabBarViewController.swift */; };
 		FE3BDF3C282B8AA9003A2DC4 /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3BDF3B282B8AA9003A2DC4 /* UpcomingTableViewCell.swift */; };
+		FE53027B283BFA8800019923 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53027A283BFA8800019923 /* CategoryTableViewController.swift */; };
 		FE59C8B7282E2ECE008E51F7 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE59C8B6282E2ECE008E51F7 /* LogoutViewController.swift */; };
 		FE59C8B9282E372A008E51F7 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE59C8B8282E372A008E51F7 /* TextFieldWithPadding.swift */; };
 		FE5C44C528111EF600E86460 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C44C428111EF600E86460 /* LogInSignUpViewController.swift */; };
@@ -51,6 +52,7 @@
 		FE28C1922806915A00A8B90C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FE3A7F4827F7009F002071E3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FE3BDF3B282B8AA9003A2DC4 /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
+		FE53027A283BFA8800019923 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		FE59C8B6282E2ECE008E51F7 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		FE59C8B8282E372A008E51F7 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
 		FE5C44C428111EF600E86460 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInSignUpViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				FE608AAA281B0DB300B2516E /* TopRatedTableViewCell.swift */,
 				FE6E5246281FD51C0075FF43 /* MainViewController.swift */,
 				FE3BDF3B282B8AA9003A2DC4 /* UpcomingTableViewCell.swift */,
+				FE53027A283BFA8800019923 /* CategoryTableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				FE205F2B281257EE00019E5B /* Urls.swift in Sources */,
 				FE608AAB281B0DB300B2516E /* TopRatedTableViewCell.swift in Sources */,
 				FE28C19028068F4E00A8B90C /* DetailViewController.swift in Sources */,
+				FE53027B283BFA8800019923 /* CategoryTableViewController.swift in Sources */,
 				FEC27A2C28074B21005A75F1 /* SearchTableViewController.swift in Sources */,
 				FE7FF95E280FD90800903A60 /* SignInViewController.swift in Sources */,
 				FEE879E227F623B5000E2A30 /* SceneDelegate.swift in Sources */,
@@ -520,6 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FilmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,6 +543,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FilmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

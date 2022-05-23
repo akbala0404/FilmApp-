@@ -9,7 +9,12 @@ target 'FilmApp' do
   pod 'SDWebImage', '~> 5.0'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Localize-Swift', '~> 3.2'
+  
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  
 
+  
   # Pods for FilmApp
 
 end
