@@ -25,6 +25,8 @@
 		FE6AA7A027FD3DE10026FA95 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6AA79F27FD3DE10026FA95 /* ProfileViewController.swift */; };
 		FE6AA7A227FD3DFA0026FA95 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6AA7A127FD3DFA0026FA95 /* LanguageViewController.swift */; };
 		FE6E5247281FD51C0075FF43 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E5246281FD51C0075FF43 /* MainViewController.swift */; };
+		FE7E1E07283D54730046B60E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E1E06283D54730046B60E /* PlayViewController.swift */; };
+		FE7E1E09283D55400046B60E /* MovieVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E1E08283D55400046B60E /* MovieVideo.swift */; };
 		FE7FF95E280FD90800903A60 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF95D280FD90800903A60 /* SignInViewController.swift */; };
 		FE7FF960280FD91500903A60 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF95F280FD91500903A60 /* SignUpViewController.swift */; };
 		FE7FF961280FD92500903A60 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5DBD9527FD626F00328447 /* SFProDisplay-Bold.ttf */; };
@@ -63,6 +65,8 @@
 		FE6AA79F27FD3DE10026FA95 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FE6AA7A127FD3DFA0026FA95 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		FE6E5246281FD51C0075FF43 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FE7E1E06283D54730046B60E /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		FE7E1E08283D55400046B60E /* MovieVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVideo.swift; sourceTree = "<group>"; };
 		FE7FF95D280FD90800903A60 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FE7FF95F280FD91500903A60 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FEC27A2B28074B21005A75F1 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				FE28C18D2806880800A8B90C /* SearchTableViewCell.swift */,
 				FEC27A2B28074B21005A75F1 /* SearchTableViewController.swift */,
+				FE7E1E06283D54730046B60E /* PlayViewController.swift */,
 				FE28C18F28068F4E00A8B90C /* DetailViewController.swift */,
 			);
 			path = Search;
@@ -172,6 +177,7 @@
 				FE28C1922806915A00A8B90C /* Movie.swift */,
 				FEE60AAF281BB23400866A25 /* MainMovies .swift */,
 				FED80CEF283149B5004F7395 /* TopRated.swift */,
+				FE7E1E08283D55400046B60E /* MovieVideo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,11 +361,13 @@
 				FE205F2D2812581100019E5B /* Storage.swift in Sources */,
 				FE3BDF3C282B8AA9003A2DC4 /* UpcomingTableViewCell.swift in Sources */,
 				FEE879E027F623B5000E2A30 /* AppDelegate.swift in Sources */,
+				FE7E1E09283D55400046B60E /* MovieVideo.swift in Sources */,
 				FE6AA7A227FD3DFA0026FA95 /* LanguageViewController.swift in Sources */,
 				FE205F2B281257EE00019E5B /* Urls.swift in Sources */,
 				FE608AAB281B0DB300B2516E /* TopRatedTableViewCell.swift in Sources */,
 				FE28C19028068F4E00A8B90C /* DetailViewController.swift in Sources */,
 				FE53027B283BFA8800019923 /* CategoryTableViewController.swift in Sources */,
+				FE7E1E07283D54730046B60E /* PlayViewController.swift in Sources */,
 				FEC27A2C28074B21005A75F1 /* SearchTableViewController.swift in Sources */,
 				FE7FF95E280FD90800903A60 /* SignInViewController.swift in Sources */,
 				FEE879E227F623B5000E2A30 /* SceneDelegate.swift in Sources */,

@@ -10,6 +10,8 @@ import Foundation
 import SwiftyJSON
 
 class Movie {
+
+    var id = 0
     var title = ""
     var release_date = ""
     var vote_average: Double = 0.0
@@ -20,6 +22,9 @@ class Movie {
     init (){
     }
     init (json: JSON){
+        if let temp = json["id"].int{
+            id = temp
+        }
         if let temp = json["title"].string{
             title = temp
         }
